@@ -1,0 +1,31 @@
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    FILE *f_input,*f_output;
+    int max,R,x,p;
+    x=0;
+    f_input=fopen("С:\\Новая папка\\R.txt","r");
+    if (f_input==0)
+        {
+            printf("Не удалось открыть фаил\n");
+            return 1;
+        }
+    fscanf(f_input,"%d",&R);
+    while(p<=R)
+        {  
+        p=pow(3,x);
+        x++;
+        }
+    f_output=fopen("C:\\Новая папка\\stepen.txt","w");
+    fprintf(f_output,"ответ=",x);
+    printf("Резултат в файле stepen.txt");
+    return 0;
+}
